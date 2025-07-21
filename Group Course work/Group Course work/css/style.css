@@ -1,0 +1,956 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Spartan',sans-serif;
+}
+
+/* header*/
+
+#hero h1{
+    font-size:50px;
+    line-height:64px;
+    color:rgb(24,23,23);
+}
+#hero h2{
+    font-size:46px;
+    line-height:54px;
+    color:rgb(24, 23, 23);
+    
+}
+#hero h4{
+    font-weight: 700;
+    font-size: 12px;
+    }
+    #hero p{
+        font-size:16px;
+        color:465b52;
+        margin:15px 0 20 px 0;
+    }
+/* this is basically for section padding whic have a class name section-p1*/
+    .section-p1{
+        padding:40px 80px;
+    }
+    .section-m1 {
+        margin:40px 0;
+
+    }
+    
+    body {
+        width:100%
+    }
+
+
+/* to align header in one row and to add some padding and background color,kept our position sticky so that
+our header won't move,to show our box shadow we use z index*/
+    #header {
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding:20px 80px;
+        background: black;
+         z-index: 999;
+        position:sticky;
+        top:0;
+        left:0;
+
+    }
+    
+/* to allign nav to one row */
+    #navbar {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*to remove the bullet point we kept list-style none and add some padding between our nav from top and button 0
+     and left and right 20px*/
+    #navbar li{
+        list-style:none;
+        padding:0 20px;
+        position:relative;
+    }
+    /* to change our font size of nav*/
+
+    #navbar li a{
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        color:whitesmoke
+    }
+
+/* to add some hover effect on our nav which turn into green also to add higlighted effect we use active class*/
+    #navbar li a:hover,
+    #navbar li a:active{
+        color:#088178;
+    }
+    /*we use sudo classes which means after and before and add underline underneath of nav, we have use
+    ::after so that every time i hiver it turn into green*/
+
+    #navbar li a.active::after,
+    #navbar li a:hover::after{
+        content:"";
+        width:30%;
+        height:2px;
+        background:#088178;
+        position:absolute;
+        bottom: -4px;
+        left:20px;
+    }
+
+
+
+/* to add a background image in section 2 and it was only available for text size so we add height width and 
+background size , we add padding for our text to have them in center*/
+    #hero{
+        background-image: url("../image/home.png");
+        height: 90vh;
+        width:100%;
+        background-size:cover;
+        background-position:top 25% right 0;
+        padding:0 80px;
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        justify-content:center;
+    }
+    /* we have target our h4 as it didn't have space so we add padding*/
+    #hero h4{
+        padding-bottom:15px;
+   }
+   #hero h1 {
+    padding-bottom: 15px;
+   }
+
+   #hero h1 {
+    color:#088178
+   }
+/* we targetes ou button and add some backgroung image ,background wasn't showing properly so we add padding
+from top 14px from left 80px from button 14px and then 6px*/
+   #hero button{
+    background-image: url("../image/button.png");
+    background-color: transparent;
+    color:#088178;
+    border:0;
+    padding:14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size:15px;
+   }
+
+   #feature {
+    display:flex;
+    align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+   }
+   /* to make a box and align image in center and to add some color in feature section*/
+#feature .fe-box{
+    width:180px;
+    text-align: center;
+    padding:25px 15px;
+    box-shadow:20px 20px 34px rgba(0,0,0,0,0.03);
+    border:1px solid #080808;
+    border-radius: 4px;
+    margin:15px 0;
+    background-color:rgb(236, 225, 225)
+    
+}
+/*to add some hover effect every time I click on box it will reduce the box shadow*/
+#feature .fe-box:hover{
+    box-shadow:10px 10px 34px rgba(7, 7, 7, 0.1);
+}
+/*to make our image responsive*/
+#feature .fe-box img{
+    width:100%;
+    margin-bottom: 10px;
+}
+/* we target our h6 and add some padding from top 9px left 8px button 6px and right 8px and border radius*/
+#feature .fe-box h6{
+    display:inline-block;
+    padding:9px 8px 6px 8px;
+    line-height:1;
+    border-radius:4px;
+    
+    color:black;
+    background-color:#b83c57;
+
+}
+/* want to add different color for diffent box so i use nth-child(2) for second image*/
+#feature .fe-box:nth-child(2) h6{
+    background-color: #088178;
+}
+#feature .fe-box:nth-child(3) h6{
+    background-color: rgb(27, 165, 14);
+}
+#feature .fe-box:nth-child(4) h6{
+    background-color: #5b5aaa;
+}
+#feature .fe-box:nth-child(5) h6{
+    background-color: #f79f08;
+}
+#feature .fe-box:nth-child(6) h6{
+    background-color: aquamarine;
+}
+#product1{
+    text-align: center;
+    padding:40px 80px;
+}
+#product1 h2{
+    font-size:46px;
+    line-height:54px;
+    color:rgb(24,23,23);
+}
+#product1 p{
+    font-size:16px;
+    color:465b52;
+    margin:15px 0 20 px 0;
+}
+#product1 h2 span{
+    color: #088178;
+}
+.box{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    width:100%;
+    height:100vh;
+}
+/* we give height and width of card and we gave trenform scale so that it can take its height and width */
+.card{
+    height:450px;
+    width:310px;
+    background-color:white;
+    transform:scale(0.7);
+    border-radius: 8px;
+    box-shadow:0 0 80px 1px #4169b0;
+}
+/* i want eerything in centre so justify content is cemter*/
+.info{
+    width:100%;
+    height:100%;
+    display:flex;
+     justify-content: center;
+}
+/*I want to style text of content so i use name class */
+.name{
+    font-size:35px;
+    font-weight:600px;
+    color:#f79f08;
+    position:absolute;
+    top:100px;
+    letter-spacing: 2px;
+}
+.prof{
+    font-size:25px;
+    color:black;
+    position:absolute;
+    top:140px;
+}
+
+.divider{
+    background-color:#949594;
+    height:1.5px;
+    width:50px;
+    position:absolute;
+    top:190px;
+}
+/*to style my text i use divider class with its background color,height,width,position accordingly*/
+
+.bio{
+    position:absolute;
+    top:220px;
+    color:#949594;
+    line-height:28px;
+    font-size:18px;
+    text-align: center;
+}
+/*to style my button i use buttonosheen class and design accordingly*/
+button.osheen {
+    position: absolute;
+    bottom:30px;
+    background-color:#f79f08;
+    border:none;
+    font-size:20px;
+    padding:13px 25px;
+    cursor: pointer;
+    color:white;
+}
+/* i insert photo and give size of photo accordingly and i dont want any space so i gave buttom 0 and trasition of 1s*/
+.photo{
+    height:100%;
+    width:100%;
+    background-image: url(../image/1.jpg.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    bottom:0;
+    background-size:100% 100%;
+    border-radius:8px;
+    transition:1s
+}
+/*to transform photo i use hover effect and give background size and position*/
+.card:hover .photo{
+    transform:scale(0.5, 0.35) translateY(-650px);
+    border-radius: 50%;
+    background-size: 100% 150%;
+    background-position: 0 -25px;
+}
+
+.photo2{
+    height:100%;
+    width:100%;
+    background-image: url(../image/kyocera.png);
+    background-repeat: no repeat;
+    position: absolute;
+    bottom:0;
+    background-size:100% 100%;
+    border-radius:8px;
+    transition:1s;
+}
+.card:hover .photo2{
+    transform:scale(0.5,0.35)translateY(-650px);
+    border-radius:50%;
+    background-size: 100% 150%;
+    background-position: 0 -25px;
+}
+.photo3{
+    height:100%;
+    width:100%;
+    background-image: url(../image/canon.png.jpg);
+    background-repeat: no repeat;
+    position: absolute;
+    bottom:0;
+    background-size:100% 100%;
+    border-radius:8px;
+    transition:1s;
+}
+.card:hover .photo3{
+    transform:scale(0.5,0.35)translateY(-650px);
+    border-radius:50%;
+    background-size: 100% 150%;
+    background-position: 0 -25px;
+}
+.photo4{
+    height:100%;
+    width:100%;
+    background-image: url(../image/brother.png.png);
+    background-repeat: no repeat;
+    position: absolute;
+    bottom:0;
+    background-size:100% 100%;
+    border-radius:8px;
+    transition:1s;
+}
+.card:hover .photo4{
+    transform:scale(0.5,0.35)translateY(-650px);
+    border-radius:50%;
+    background-size: 100% 150%;
+    background-position: 0 -25px;
+}
+.portfolio{
+    background:var(--secong-bg-color);
+}
+.heading{
+    text-align:center;
+    font-size:3.5rem;
+    padding: 20px;
+}
+.portfolio h2 span{
+    color:#063f3b;
+}
+
+
+
+.portfolio-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    align-items:center;
+    gap:2.5rem;
+}
+.portfolio-container .portfolio-box{
+    position:relative;
+    border-radius:2rem;
+    box-shadow:0 0 1 rem var(--bg color);
+overflow:hidden;
+display:flex;
+}
+.portfolio-box img{
+    width:100%;
+    transition: .5s ease;
+    
+}
+.portfolio-box:hover img{
+    transform:scale(1.1);
+}
+
+.portfolio-box .portfolio-layer{
+    position:absolute;
+    bottom:0;
+    left :0;
+    width:100%;
+    height:100%;
+    background:gray;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align: center;
+    padding: 0 4rem;
+    transform:translateY(100%);
+    transition:.5s ease;
+}
+.portfolio-box:hover .portfolio-layer{
+    transform:translateY(0);
+
+
+}
+
+
+.portfolio-layer h4{
+font-size:3rem
+}
+.portfolio-layer p{
+    font-size:1.6rem;
+    margin: .3rem 0 1rem;
+}
+/* to make them in one row and to add some background image and to add background position we add from top 20%
+and from left 30%*/
+#newsletter{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    align-items:center;
+    background-image: url(image/b14.png);
+    width:100%;
+    height:40vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #35383d;
+}
+/* to style our font text we targeted h4 and add color on it*/
+#newsletter h4{
+    font-size:22px;
+    font-weight:700;
+    color:#fff;
+}
+/* to style our paragraph we targeted p and give font size and weight*/
+#newsletter p{
+    font-size:14px;
+    font-weight:600;
+    color:#818ea0;
+}
+/* as we have span tag to have a different color for that word so we targeted our span and add color*/
+#newsletter p span{
+    color:#97af0e;
+}
+/*to allign form in one row*/
+#newsletter .form{
+    display: flex;
+    width: 40%;
+}
+/* to style our input section we use padding from top and buttom 0 and from left and right 1.25rem*/
+#newsletter input{
+    height:3.123rem;
+    padding:0 1.25em;
+    font-size:14px;
+    width:100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+/* we targeted out button which have a class name normal and style our button*/
+button.normal{
+    font-size:14px;
+    font-weight:600;
+    padding:15px 30px;
+    color:#000;
+    background-color: #fff;
+    border-radius:4px;
+    cursor:pointer;
+    border:none;
+    outline:none;
+    transition: 0.2s;
+
+}
+/* style newsletter section button by giving color and border*/
+#newsletter button{
+    background-color:#088178;
+    color:#111111;
+    white-space:nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+}
+/*to arrange all coloumn in one row */
+footer{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    background-color: black;
+}
+footer h4{
+    color:white;
+}
+/* we have targeted our col class to change links in one coloumn*/
+footer .col{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    margin-bottom:20px;
+}
+/* to add space buttom of logo*/
+footer .logo{
+    margin-bottom: 30px;
+}
+/* to add font size and padding in buttom we targeted h4*/
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+/* to style p tag*/
+footer p{
+    font-size: 13px;
+    margin:0 0 8px 0 ;
+color:white;
+    
+}
+/*to target our links we use anchor tag */
+footer a{
+    font-size: 13px;
+    text-decoration:none;
+    color:white;
+    margin:0 0 8px 0 ;
+}
+footer.follow{
+    margin-top:20px;
+} 
+/* we want to change the color of icon */
+footer .follow i{
+    margin-top:20px;
+    color:#063f3b;
+    padding-right:4px;
+    cursor: pointer;
+}
+/*to have some space in image*/
+footer .install img{
+    margin: 10px 0 15px;
+}
+/*we use hover effect so whenever we click on icon it turns into red as weel as links*/
+footer .follow i:hover,
+footer a:hover{
+    color:#bd1010;
+}
+footer .copyright{
+    width:100%;
+    text-align:center;
+}
+#page-header{
+    background-image: url(../image/contact.png.png);
+    width:100%;
+    height:40vh;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding:14px;
+    color:white;
+
+}
+#page-header h2{
+    color: white;
+}
+
+#contact-details{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#contact-details .details{
+    width:40%;
+}
+#contact-details .details span,
+#form-details form span{
+    font-size:12px;
+}
+#contact-details .details h2,
+#form-details form h2{
+    font-size:26px;
+    line-height:35px;
+    padding:20px 0;
+}
+#contact-details .details h3{
+    font-size:16px;
+    
+    padding-bottom:15px;
+}
+#contact-details .details li{
+    list-style:none;
+    display:flex;
+    padding:10px 0;
+}
+#contact-details .details li i{
+    font-size: 14px;
+    padding-right: 22px;
+}
+#contact-details .details li p{
+    margin:0;
+    font-size:14px;
+}
+#contact-details .map{
+    width:55%;
+    height:400px;
+
+}
+
+#form-details form{
+    width:65%;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+#form-details form input,
+#form-details form textarea{
+    width:100%;
+    padding:12px 15px;
+    outline:none;
+    margin-bottom:20px;
+    border:1px solid black;
+}
+
+
+
+
+/* Styling articles in Research Page */
+article {
+    width: 92%;
+    margin: 10px auto;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  /* Additional styling for sections */
+  section {
+    padding: 20px;
+  }
+  /* Styling for forms */
+  form {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  /* Styling for h2 elements */
+  h2 {
+    color: #333;
+  }
+  /* Styling for reviews */
+  .review {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  
+
+.text{
+    
+    color: #686464;
+    text-transform: capitalize;    
+}
+.sub-container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 48px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.teams {
+    margin: 28px;
+    padding: 22px;
+    max-width: 30%;
+    height: 500px;
+    cursor:pointer;
+    transition: 0.4s;
+    border-radius: 60px;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.5);
+    
+}
+
+ .teams:hover{ 
+    background: rgb(218, 239, 241);
+    transition: 1s;
+    border-radius: 30px;
+}  
+.teams img{
+    border-radius: 100px;
+}
+
+.feedbackinput{
+width: 99%;
+padding: 10px;
+margin-bottom: 10px;
+}
+
+input[type="radio"] {
+margin-right: 5px;
+}
+
+input[type="submit"] {
+background-color: #4CAF50;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+input[type="submit"]:hover {
+background-color: #45a049;
+}
+
+.name1{
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: sans-serif,monospace;
+}
+
+.desig{
+    font-style: italic;
+    color: #888;
+}
+
+.about{
+    margin:0;
+    font-weight: lighter;
+    color: #1b1818;   
+}
+
+.social-links{
+    margin: 14px;
+}
+
+.social-links a{
+    display: inline-flex;
+    height: 30px;
+    width: 30px;
+    transition: .4s;
+}
+.social-links a :hover{
+    transform: scale(1.5);
+    transition: 0.3s;
+}
+.social-links a i{
+    color: #444;
+}
+
+
+.feedback{
+margin: 20px;
+padding: 20px;
+background-color: #f2f2f2;
+border-radius: 10px;
+}
+
+.CVtext{
+    color: #272727;
+    font-family: Arial, sans-serif ;
+}
+
+.cvicon{
+    margin-right: 10px;
+}
+
+
+/* Styling for the header section of Blog Page with a background image */
+#page-header.blog-header {
+    background-image: url("img04.jpg");
+
+}
+/* Styling for the entire blog section */
+#blog{
+    padding: 100px 100px 0 100px;
+}
+/* Styling for each blog box */
+#blog .blog-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding-bottom: 90px;
+}
+/* Styling for the blog image */
+#blog .blog-img {
+    width: 40%;
+    margin-right: 40px;
+}
+/* Styling for images inside the blog */
+#blog img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+/* Styling for the heading inside each blog box */
+#blog .blog-box h1 {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    font-size: 70px;
+    font-weight: 700;
+    color:rgb(226, 230, 234);
+    z-index: -9;
+    margin-bottom: 20px;
+}
+/* Styling for the card containing blog details */
+.card12 {
+    background-color:rgb(203, 205, 208);
+    width: 600px;
+    border-radius: 5px;
+    line-height: 1.1;
+}
+/* Styling for checkbox - hidden by default */
+#ch1 {
+    display: none;
+}
+
+#ch1:checked ~ .content {
+    display: block;
+}
+
+#ch1:checked ~ label {
+    display: none;
+}
+
+#ch2 {
+    display: none;
+}
+
+#ch2:checked ~ .content {
+    display: block;
+}
+
+#ch2:checked ~ label {
+    display: none;
+}
+/* Styling for content that is initially hidden */
+.content {
+    display: none;
+}
+
+#ch3 {
+    display: none;
+}
+
+#ch3:checked ~ .content {
+    display: block;
+}
+
+#ch3:checked ~ label {
+    display: none;
+}
+#ch4 {
+    display: none;
+}
+
+#ch4:checked ~ .content {
+    display: block;
+}
+
+#ch4:checked ~ label {
+    display: none;
+}
+#ch5 {
+    display: none;
+}
+
+#ch5:checked ~ .content {
+    display: block;
+}
+
+#ch5:checked ~ label {
+    display: none;
+}
+/* Styling for labels to toggle content visibility */
+label {
+    display: inline-block;
+    cursor: pointer;
+    color: rgb(228, 239, 239);
+    background-color: rgb(13, 12, 13);
+    padding: 3px 13px;
+    border-radius: 3px;
+    margin-top: 12px;
+
+}
+
+#page-header1 {
+    background-image: url(../image/img04.jpg);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+.product-card {
+    border: 2px solid;
+    padding: 10px;
+    width: 250px;
+    display: flex;
+    flex-wrap:wrap ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.product-name {
+    font-size: 1.5rem;
+}
+
+.buy-button {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(0, 0, 255);
+    color:white;
+}
+
+.add-cart-button {
+    width: 100px;
+    height: 30px;
+    background-color: orange;
+    color: white;
+}
+
+#products-section {
+    padding: 20px;
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.rating-text{
+    font-size: 0.8rem;
+}
+
+#products-section{
+    display: flex ;
+    flex-wrap: wrap;
+}
